@@ -128,8 +128,8 @@ export default Vue.extend({
           { src: url, x: 0, y: 0 },
           { src: text, x: this.text_X_val, y: this.text_Y_val },
         ]).then((b64) => (this.imageLink = b64));
-        this.image_width = document.getElementById("img").width;
-        this.image_height = document.getElementById("img").height;
+        this.image_width = document.getElementById("img").naturalWidth;
+        this.image_height = document.getElementById("img").naturalHeight;
       } catch (e) {
         console.log(e);
       }
@@ -155,8 +155,8 @@ export default Vue.extend({
 
 <style scoped>
 .form_range {
-  margin-left: 30%;
-  margin-right: 30%;
+  margin-left: 20%;
+  margin-right: 20%;
   margin-top: 2%;
 }
 #app {
