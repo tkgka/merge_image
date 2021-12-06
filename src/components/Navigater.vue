@@ -24,7 +24,7 @@
         </button>
       </div>
       <div class="flex-1 px-2 mx-2">
-        <span class="text-lg font-bold"> With one icon </span>
+        <span class="text-lg font-bold"> Merge Image </span>
       </div>
     </div>
   </div>
