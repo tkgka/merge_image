@@ -3,13 +3,12 @@
     <div class="filebox">
       <input
         @change="upload"
-        multiple
         accept="image/*"
         type="file"
         id="file"
         class="filebox"
       />
-      <label for="file" class="btn btn-margin">파일찾기</label>
+      <label for="file" class="btn btn-margin">사진찾기</label>
       <input type="file" id="file" />
 
       <label for="my-modal-2" class="btn btn-primary modal-button">text</label>
