@@ -5,7 +5,7 @@
     >
       <div class="flex-none">
         <button class="btn btn-square btn-ghost">
-          <a href="https://www.github.com/tkgka">
+          <a href="https://www.github.com/tkgka/merge_image">
             <svg
               height="32"
               aria-hidden="true"
