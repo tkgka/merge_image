@@ -26,7 +26,6 @@
         />
         <br />
         <label for="font" class="label-text">font </label>
-
         <select
           v-model="font"
           class="input input-bordered label-text"
@@ -128,8 +127,6 @@ export default Vue.extend({
           { src: url, x: 0, y: 0 },
           { src: text, x: this.text_X_val, y: this.text_Y_val },
         ]).then((b64) => (this.imageLink = b64));
-        this.image_width = document.getElementById("img").naturalWidth;
-        this.image_height = document.getElementById("img").naturalHeight;
       } catch (e) {
         console.log(e);
       }
@@ -146,6 +143,8 @@ export default Vue.extend({
     img_update() {
       this.image_url != "" && this.text_data != ""
         ? (this.make_text2png(),
+          (this.image_width = document.getElementById("img").naturalWidth),
+          (this.image_height = document.getElementById("img").naturalHeight),
           this.make_mergeImages(this.image_url, this.text_data))
         : null;
     },
