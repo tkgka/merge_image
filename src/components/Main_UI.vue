@@ -17,7 +17,7 @@
     <input type="checkbox" id="my-modal-2" class="modal-toggle" />
     <div class="modal">
       <div class="modal-box">
-        <label for="text">text </label>
+        <label for="text" class="label-text">text </label>
         <input
           type="text"
           placeholder="text"
@@ -25,7 +25,7 @@
           v-model="input_data"
         />
         <br />
-        <label for="font">font </label>
+        <label for="font" class="label-text">font </label>
 
         <select
           v-model="font"
@@ -40,7 +40,7 @@
         </select>
 
         <br />
-        <label for="font_size">font size</label>
+        <label for="font_size" class="label-text">font size</label>
         <input
           type="text"
           placeholder="font_size"
@@ -48,7 +48,7 @@
           v-model="font_size"
         />
         <br />
-        <label for="font_color">font color</label>
+        <label for="font_color" class="label-text">font color</label>
         <input
           type="text"
           placeholder="font_color"
@@ -62,7 +62,7 @@
     </div>
 
     <div class="form_range">
-      <label for="text_X_val">X index</label>
+      <label for="text_X_val" class="label-text">X index</label>
       <input
         id="text_X_val"
         type="range"
@@ -72,7 +72,7 @@
         @change="img_update"
       />
 
-      <label for="text_Y_val">Y index</label>
+      <label for="text_Y_val" class="label-text">Y index</label>
       <input
         id="text_Y_val"
         type="range"
