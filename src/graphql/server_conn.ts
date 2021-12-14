@@ -4,13 +4,13 @@ import { createHttpLink } from "apollo-link-http";
 import { setContext } from "apollo-link-context";
 import gql from "graphql-tag";
 import env from "../../env";
-console.log(env.VUE_APP_TEST);
+
 const authLink = setContext((_, { headers }) => {
   const token = env.VUE_APP_TOKEN;
   return {
     headers: {
       ...headers,
-      authorization: token ? `Bearer ${env.VUE_APP_TOKEN}` : "",
+      authorization: token ? `Bearer ${token}` : "",
     },
   };
 });
