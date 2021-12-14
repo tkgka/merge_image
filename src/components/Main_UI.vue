@@ -93,6 +93,7 @@ import Vue from "vue";
 import mergeImages from "merge-images";
 import text2png from "text2png";
 import fonts from "../assets/data/fonts.ts";
+import apollo_client from "../graphql/server_conn";
 export default Vue.extend({
   name: "Main",
   data() {
@@ -110,6 +111,9 @@ export default Vue.extend({
       image_width: 0,
       image_height: 0,
     };
+  },
+  created() {
+    apollo_client("merge.oozoo.site");
   },
   methods: {
     async make_text2png() {

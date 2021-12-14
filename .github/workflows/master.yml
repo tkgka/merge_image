@@ -34,7 +34,8 @@ jobs:
 
       - run: yarn
       - run: yarn build
-
+      env:
+        VUE_APP_TEST: ${{ secrets.TEST }}
       - working-directory: dist
         run: |
           git init
