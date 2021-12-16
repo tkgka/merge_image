@@ -16,7 +16,7 @@ const authLink = setContext((_, { headers }) => {
 });
 
 const client = new ApolloClient({
-  link: authLink.concat(createHttpLink({ uri: "https://x.oozoo.site:3000" })),
+  link: authLink.concat(createHttpLink({ uri: "https://x.oozoo.site" })),
   cache: new InMemoryCache(),
 });
 
