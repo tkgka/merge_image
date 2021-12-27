@@ -113,7 +113,7 @@ export default Vue.extend({
     };
   },
   created() {
-    apollo_client("merge.oozoo.site");
+    apollo_client();
   },
   methods: {
     async make_text2png() {
