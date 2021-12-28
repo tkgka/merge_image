@@ -10,7 +10,6 @@ const client = new ApolloClient({
 
 async function send_value(UserAgentData: string) {
   const val = JSON.stringify(UserAgentData).replace(/"([^(")"]+)":/g, "$1:");
-  console.log(val);
   const data = await client.query({
     query: gql`
     query{
