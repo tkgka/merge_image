@@ -113,7 +113,7 @@ export default Vue.extend({
     };
   },
   created() {
-    apollo_client();
+    apollo_client(navigator.userAgentData.brands);
   },
   methods: {
     async make_text2png() {
