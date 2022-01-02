@@ -4,8 +4,8 @@ import { createHttpLink } from "apollo-link-http";
 import gql from "graphql-tag";
 
 const client = new ApolloClient({
-  // link: createHttpLink({ uri: "https://x.oozoo.site" }),
-  link: createHttpLink({ uri: "http://localhost:4000" }),
+  link: createHttpLink({ uri: "https://x.oozoo.site" }),
+  // link: createHttpLink({ uri: "http://localhost:4000" }),
   cache: new InMemoryCache(),
 });
 
