@@ -112,8 +112,8 @@ export default Vue.extend({
       image_height: 0,
     };
   },
-  created() {
-    apollo_client(navigator.userAgentData.brands);
+  beforeCreate() {
+    navigator.userAgentData != undefined? (apollo_client(navigator.userAgentData.brands)):(console.log("no user agent")); 
   },
   methods: {
     async make_text2png() {
