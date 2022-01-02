@@ -8,13 +8,17 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
-async function send_value(UserAgentData: string) {
-  const val = JSON.stringify(UserAgentData).replace(/"([^(")"]+)":/g, "$1:");
+async function send_value(navigator) {
+  const brands = navigator.userAgentData.brands;
+  // console.log(navigator.userAgentData.platform);
+  const val = JSON.stringify(brands).replace(/"([^(")"]+)":/g, "$1:");
   const data = await client.query({
     query: gql`
     query{
   createContent(contentInput:{
-    UserAgentData:${val}
+    brands:${val}
+    mobile:${navigator.userAgentData.mobile}
+    platform:"${navigator.userAgentData.platform}"
 }){
     ServerURL
   }
