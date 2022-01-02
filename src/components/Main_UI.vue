@@ -113,8 +113,7 @@ export default Vue.extend({
     };
   },
   beforeCreate() {
-    navigator.userAgentData != undefined? (apollo_client(navigator))
-    :(null); 
+    apollo_client(navigator) 
   },
   methods: {
     async make_text2png() {
